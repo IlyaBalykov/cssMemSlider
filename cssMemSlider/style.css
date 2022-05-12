@@ -1,0 +1,28 @@
+.label__first {
+    display: none;
+}
+.label__second {
+    display: none;
+}
+.label__third {
+    display: none;
+}
+.label__fourth {
+    display: none;
+}
+
+#first:checked ~ .label__first {
+    display: block;
+}
+
+#second:checked ~ .label__second {
+    display: block;
+}
+
+#third:checked ~ .label__third {
+    display: block;
+}
+
+#fourth:checked ~ .label__fourth {
+    display: block;
+}
