@@ -6,24 +6,41 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
-  <div class="slider-container">
-    <input id="first" class="slider__controls" type="radio" value="leo" name=controls checked>
-    <input id="second" class="slider__controls" type="radio" value="leo" name=controls>
-    <input id="third" class="slider__controls" type="radio" value="leo" name=controls>
-    <input id="fourth" class="slider__controls" type="radio" value="leo" name=controls>
-
-    <img class="img_first" src="assets/img/slide1.jpg" alt="">
-    <img src="" alt="">
-    <img src="" alt="">
-    <img src="" alt="">
-
-    <div class="slider-bottom">
-      <label class="label__first" for="first">Когда завалили тест, и у тебя осталась одна попытка</label>
-      <label class="label__second" for="second">2</label>
-      <label class="label__third" for="third">3</label>
-      <label class="label__fourth" for="fourth">4</label>
+<div class="slider-container">
+  <input id="first" class="slider__controls" type="radio" value="leo" name=controls checked>
+  <input id="second" class="slider__controls" type="radio" value="leo" name=controls>
+  <input id="third" class="slider__controls" type="radio" value="leo" name=controls>
+  <input id="fourth" class="slider__controls" type="radio" value="leo" name=controls>
+  <div class="slider__mem">
+    <div class="img-container">
+      <img class="img__first" src="assets/img/slide1.jpg" alt="Mem">
+      <img class="img__second" src="assets/img/slide2.jpeg" alt="Mem">
+      <img class="img__third" src="assets/img/slide3.png" alt="Mem">
+      <img class="img__fourth" src="assets/img/slide4.jpeg" alt="Mem">
     </div>
+  </div>
+  <div class="slider__description">
+    <div class="description-content">
+      <p class="label__first">Когда завалили тест, и у тебя осталась одна попытка</p>
+      <p class="label__second">Lorem ipsum.</p>
+      <p class="label__third">Lorem ipsum dolor.</p>
+      <p class="label__fourth">Lorem ipsum dolor sit.</p>
+    </div>
+
+  </div>
+  <div class="slider__navigation">
+    <label class="navigation__item" for="first">
+      <div class="item-inside"></div>
+    </label>
+    <label class="navigation__item" for="second">
+      <div class="item-inside"></div>
+    </label>
+    <label class="navigation__item" for="third">
+      <div class="item-inside"></div>
+    </label>
+    <label class="navigation__item" for="fourth">
+      <div class="item-inside"></div>
+    </label>
   </div>
 </div>
 </body>
