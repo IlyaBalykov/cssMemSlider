@@ -1,3 +1,31 @@
+body {
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.slider-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    max-width: 1280px;
+    overflow: hidden;
+}
+
+.slider-bottom {
+    display: flex;
+    flex-direction: row;
+}
+.slider__controls {
+
+}
+.img_first {
+    transition: 2s;
+    transform: translateX(100vw);
+
+}
+label {
+
+}
 .label__first {
     display: none;
 }
@@ -13,6 +41,11 @@
 
 #first:checked ~ .label__first {
     display: block;
+}
+
+#first:checked ~ img[src="./assets/img/leo.jpg"] {
+    display: block;
+    transform: translateX(0vw);
 }
 
 #second:checked ~ .label__second {

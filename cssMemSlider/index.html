@@ -6,22 +6,25 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="slider">
-  <img src="" alt="">
-  <img src="" alt="">
-  <img src="" alt="">
-  <img src="" alt="">
-</div>
-<form class="one" action="#">
-  <input id="first" type="radio" value="leo" name=controls>
-  <input id="second" type="radio" value="leo" name=controls>
-  <input id="third" type="radio" value="leo" name=controls>
-  <input id="fourth" type="radio" value="leo" name=controls>
+<div class="container">
+  <div class="slider-container">
+    <input id="first" class="slider__controls" type="radio" value="leo" name=controls checked>
+    <input id="second" class="slider__controls" type="radio" value="leo" name=controls>
+    <input id="third" class="slider__controls" type="radio" value="leo" name=controls>
+    <input id="fourth" class="slider__controls" type="radio" value="leo" name=controls>
 
-  <label class="label__first" for="first">1</label>
-  <label class="label__second" for="second">2</label>
-  <label class="label__third" for="third">3</label>
-  <label class="label__fourth" for="fourth">4</label>
-</form>
+    <img class="img_first" src="assets/img/slide1.jpg" alt="">
+    <img src="" alt="">
+    <img src="" alt="">
+    <img src="" alt="">
+
+    <div class="slider-bottom">
+      <label class="label__first" for="first">Когда завалили тест, и у тебя осталась одна попытка</label>
+      <label class="label__second" for="second">2</label>
+      <label class="label__third" for="third">3</label>
+      <label class="label__fourth" for="fourth">4</label>
+    </div>
+  </div>
+</div>
 </body>
 </html>
