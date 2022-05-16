@@ -13,7 +13,6 @@ body {
     grid-template-rows: auto;
     row-gap: 2rem;
     justify-content: center;
-    max-width: 1280px;
     overflow: hidden;
 }
 
@@ -114,7 +113,7 @@ body {
     height: 1rem;
     margin: 0;
     padding: 0;
-    border: .3rem solid darkgray;
+    border: .2rem solid darkgray;
     border-radius: 50%;
     background-color: darkgray;
     cursor: pointer;
@@ -175,13 +174,8 @@ body {
     }
 
     .slider-container {
-        display: grid;
         grid-template-columns: repeat(4, 20vw);
         grid-template-rows: auto;
-        row-gap: 2rem;
-        justify-content: center;
-        max-width: 1280px;
-        overflow: hidden;
     }
 
     .img__first,
