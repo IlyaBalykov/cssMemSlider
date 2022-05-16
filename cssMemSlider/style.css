@@ -167,3 +167,7 @@ body {
 #fourth:checked ~ .slider__navigation > .navigation__area:nth-child(4) > .area__item {
     border-color: darkslategray;
 }
+
+@media screen and (max-width: 768px) {
+
+}
