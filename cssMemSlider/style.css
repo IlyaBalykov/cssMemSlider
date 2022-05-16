@@ -116,14 +116,15 @@ body {
     padding: 0;
     border: .3rem solid darkgray;
     border-radius: 50%;
+    background-color: darkgray;
     cursor: pointer;
     transition: all .6s;
 }
 
 .item-inside {
     display: inline-block;
-    width: 100%;
-    height: 100%;
+    width: 110%;
+    height: 110%;
     border-radius: 50%;
     background-color: darkgray;
     transition: all .6s;
