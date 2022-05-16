@@ -169,5 +169,90 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+    body {
+        padding-top: 5%;
+    }
 
+    .slider-container {
+        display: grid;
+        grid-template-columns: repeat(4, 20vw);
+        grid-template-rows: auto;
+        row-gap: 20px;
+        justify-content: center;
+        max-width: 1280px;
+        overflow: hidden;
+    }
+
+    .img__first,
+    .img__second,
+    .img__third,
+    .img__fourth {
+        width: 80vw;
+    }
+
+    .img-container {
+        display: grid;
+        grid-template-columns: repeat(4, 80vw);
+        margin-left: 0;
+        transition: all 1s;
+    }
+
+    /*slider*/
+    #first:checked ~ .slider__mem >.img-container {
+        margin-left: 0;
+    }
+    #second:checked ~ .slider__mem >.img-container {
+        margin-left: -80vw;
+    }
+    #third:checked ~ .slider__mem >.img-container {
+        margin-left: -160vw;
+    }
+    #fourth:checked ~ .slider__mem >.img-container {
+        margin-left: -240vw;
+    }
+
+    /*navigation*/
+    .slider__navigation {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*description*/
+    .slider__description {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        width: 80vw;
+        overflow: hidden;
+    }
+
+    .description-container {
+        display: grid;
+        grid-template-columns: repeat(4, 80vw);
+        transition: all 1s;
+    }
+
+    .description__text {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    #first:checked ~ .slider__description >.description-container {
+        margin-left: 0;
+    }
+    #second:checked ~ .slider__description >.description-container {
+        margin-left: -80vw;
+    }
+    #third:checked ~ .slider__description >.description-container {
+        margin-left: -160vw;
+    }
+    #fourth:checked ~ .slider__description >.description-container {
+        margin-left: -240vw;
+    }
 }
