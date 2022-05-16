@@ -10,8 +10,8 @@ body {
 .slider-container {
     display: grid;
     grid-template-columns: repeat(4, 12.5vw);
-    grid-template-rows: auto 100px;
-    row-gap: 20px;
+    grid-template-rows: auto;
+    row-gap: 2rem;
     justify-content: center;
     max-width: 1280px;
     overflow: hidden;
@@ -114,7 +114,7 @@ body {
     height: 1rem;
     margin: 0;
     padding: 0;
-    border: 2px solid darkgray;
+    border: .3rem solid darkgray;
     border-radius: 50%;
     cursor: pointer;
     transition: all .6s;
@@ -122,8 +122,8 @@ body {
 
 .item-inside {
     display: inline-block;
-    width: .7rem;
-    height: .7rem;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     background-color: darkgray;
     transition: all .6s;
@@ -177,7 +177,7 @@ body {
         display: grid;
         grid-template-columns: repeat(4, 20vw);
         grid-template-rows: auto;
-        row-gap: 20px;
+        row-gap: 2rem;
         justify-content: center;
         max-width: 1280px;
         overflow: hidden;
