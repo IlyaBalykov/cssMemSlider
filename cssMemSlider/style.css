@@ -1,0 +1,253 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow-y: hidden;
+    background-color: gainsboro;
+}
+
+.slider-container {
+    display: grid;
+    grid-template-columns: repeat(4, 12.5vw);
+    grid-template-rows: auto;
+    row-gap: 2rem;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.slider__controls {
+    display: none;
+}
+
+.img__first,
+.img__second,
+.img__third,
+.img__fourth {
+    width: 50vw;
+}
+
+.slider__mem {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    overflow: hidden;
+}
+
+.img-container {
+    display: grid;
+    grid-template-columns: repeat(4, 50vw);
+    margin-left: 0;
+    transition: all 1s;
+}
+
+
+/*slider*/
+#first:checked ~ .slider__mem >.img-container {
+    margin-left: 0;
+}
+#second:checked ~ .slider__mem >.img-container {
+    margin-left: -50vw;
+}
+#third:checked ~ .slider__mem >.img-container {
+    margin-left: -100vw;
+}
+#fourth:checked ~ .slider__mem >.img-container {
+    margin-left: -150vw;
+}
+
+/*description*/
+.slider__description {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    width: 37.5vw;
+    overflow: hidden;
+}
+
+.description-container {
+    display: grid;
+    grid-template-columns: repeat(4, 37.5vw);
+    transition: all 1s;
+}
+
+.description__text {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+#first:checked ~ .slider__description >.description-container {
+    margin-left: 0;
+}
+#second:checked ~ .slider__description >.description-container {
+    margin-left: -37.5vw;
+}
+#third:checked ~ .slider__description >.description-container {
+    margin-left: -75vw;
+}
+#fourth:checked ~ .slider__description >.description-container {
+    margin-left: -112.5vw;
+}
+
+/*navigation*/
+.slider__navigation {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.navigation__area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+.area__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1rem;
+    height: 1rem;
+    margin: 0;
+    padding: 0;
+    border: .2rem solid darkgray;
+    border-radius: 50%;
+    background-color: darkgray;
+    cursor: pointer;
+    transition: all .6s;
+}
+
+.item-inside {
+    display: inline-block;
+    width: 110%;
+    height: 110%;
+    border-radius: 50%;
+    background-color: darkgray;
+    transition: all .6s;
+}
+
+#first:hover ~ .slider__navigation > .navigation__area:nth-child(1) > .area__item > .item-inside {
+    background-color: darkslategray;
+}
+#second:hover ~ .slider__navigation >.navigation__area:nth-child(2) >.area__item > .item-inside {
+    background-color: darkslategray;
+}
+#third:hover ~ .slider__navigation >.navigation__area:nth-child(3) >.area__item > .item-inside {
+    background-color: darkslategray;
+}
+#fourth:hover ~ .slider__navigation >.navigation__area:nth-child(4) >.area__item > .item-inside {
+    background-color: darkslategray;
+}
+
+#first:active ~ .slider__navigation >.navigation__area:nth-child(1) > .area__item {
+   transform: translate(15%, 10%);
+}
+#second:active ~ .slider__navigation > .navigation__area:nth-child(2) > .area__item {
+    transform: translate(15%, 10%);
+}
+#third:active ~ .slider__navigation > .navigation__area:nth-child(3) > .area__item {
+    transform: translate(15%, 10%);
+}
+#fourth:active ~ .slider__navigation > .navigation__area:nth-child(4) > .area__item {
+    transform: translate(15%, 10%);
+}
+
+#first:checked ~ .slider__navigation > .navigation__area:nth-child(1) > .area__item {
+    border-color: darkslategray;
+}
+#second:checked ~ .slider__navigation > .navigation__area:nth-child(2) > .area__item {
+    border-color: darkslategray;
+}
+#third:checked ~ .slider__navigation > .navigation__area:nth-child(3) > .area__item {
+    border-color: darkslategray;
+}
+#fourth:checked ~ .slider__navigation > .navigation__area:nth-child(4) > .area__item {
+    border-color: darkslategray;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 5%;
+    }
+
+    .slider-container {
+        grid-template-columns: repeat(4, 20vw);
+        grid-template-rows: auto;
+    }
+
+    .img__first,
+    .img__second,
+    .img__third,
+    .img__fourth {
+        width: 80vw;
+    }
+
+    .img-container {
+        display: grid;
+        grid-template-columns: repeat(4, 80vw);
+        margin-left: 0;
+        transition: all 1s;
+    }
+
+    /*slider*/
+    #first:checked ~ .slider__mem >.img-container {
+        margin-left: 0;
+    }
+    #second:checked ~ .slider__mem >.img-container {
+        margin-left: -80vw;
+    }
+    #third:checked ~ .slider__mem >.img-container {
+        margin-left: -160vw;
+    }
+    #fourth:checked ~ .slider__mem >.img-container {
+        margin-left: -240vw;
+    }
+
+    /*navigation*/
+    .slider__navigation {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*description*/
+    .slider__description {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        width: 80vw;
+        overflow: hidden;
+    }
+
+    .description-container {
+        display: grid;
+        grid-template-columns: repeat(4, 80vw);
+        transition: all 1s;
+    }
+
+    .description__text {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    #first:checked ~ .slider__description >.description-container {
+        margin-left: 0;
+    }
+    #second:checked ~ .slider__description >.description-container {
+        margin-left: -80vw;
+    }
+    #third:checked ~ .slider__description >.description-container {
+        margin-left: -160vw;
+    }
+    #fourth:checked ~ .slider__description >.description-container {
+        margin-left: -240vw;
+    }
+}
